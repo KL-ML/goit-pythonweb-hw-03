@@ -44,7 +44,7 @@ class HttpHandler(BaseHTTPRequestHandler):
         }
         print(data_dict)
         self.send_response(302)
-        self.send_header("Location", "/")
+        self.send_header("Location", "/read")
         self.end_headers()
         update_data_json(data_dict)
 
@@ -76,4 +76,4 @@ def run(server_class=HTTPServer, handler_class=HttpHandler, port=3000):
 
 
 if __name__ == '__main__':
-    run(port=8080)
+    run()
